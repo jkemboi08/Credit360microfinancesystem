@@ -1,5 +1,5 @@
 {
-  "buildCommand": "vite build",
+  "buildCommand": "vite build --config vite.config.vercel.ts",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [

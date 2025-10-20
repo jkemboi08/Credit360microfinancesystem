@@ -1,0 +1,21 @@
+client_type,first_name,middle_name,last_name,gender,phone_number,email_address,national_id_number,tin_number,date_of_birth,marital_status,region,district,ward,street_name,house_number,employment_status,occupation,employer_name,monthly_income,company_name,registration_number,business_type,director_first_name,director_last_name,director_gender,director_phone_number,group_name,group_type,group_size,chairman_first_name,chairman_last_name,chairman_gender,bank_name,bank_branch,account_number,account_type
+individual,John,Michael,Doe,male,+255712345678,john.doe@example.com,19850101-12345-12345-12,123456789,1985-01-15,married,Dar es Salaam,Ilala,Mchikichini,Uhuru Street,123,employed,Teacher,ABC School,1500000,,,,,,,,,,,,,,CRDB Bank,Ilala Branch,1234567890,savings
+individual,Jane,Mary,Smith,female,+255723456789,jane.smith@example.com,19900505-23456-23456-23,234567890,1990-05-10,single,Arusha,Arusha City,Kaloleni,Sokoine Road,456,self_employed,Business Owner,,2000000,,,,,,,,,,,,,,NMB Bank,Arusha Branch,2345678901,current
+corporate,,,,,+255734567890,info@mwalimu.co.tz,,,,,Dar es Salaam,Kinondoni,Mikocheni,Mwai Kibaki Road,789,,,,,Mwalimu Enterprises Ltd,REG-2020-12345,retail,James,Wilson,male,+255745678901,,,,,,,CRDB Bank,Mikocheni Branch,3456789012,business
+group,,,,,+255756789012,upendo@group.co.tz,,,,,Mwanza,Nyamagana,Igoma,Kenyatta Road,321,,,,,,,,,,,Upendo Savings Group,savings,25,Mary,Johnson,female,NBC Bank,Mwanza Branch,4567890123,group
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

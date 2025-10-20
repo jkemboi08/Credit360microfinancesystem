@@ -28,3 +28,4 @@ The build was failing with: `[vite]: Rollup failed to resolve import "/src/main.
 3. Redeploy on Vercel
 
 The build should now work properly. If you still get TypeScript errors, you can run `npm run type-check` locally to identify and fix them.
+

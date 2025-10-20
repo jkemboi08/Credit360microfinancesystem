@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Client Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Client Upload Template Generator</h1>
+    <button onclick="generateTemplate()">Generate Template</button>
+    
+    <script>
+        function generateTemplate() {
+            const templateData = [
+                {
+                    'First Name *': 'John',
+                    'Middle Name': 'Michael',
+                    'Last Name *': 'Doe',
+                    'Common Name': 'Johnny',
+                    'Gender *': 'male',
+                    'Date of Birth *': '1990-01-15',
+                    'National ID Number *': '1234567890123456',
+                    'ID Type *': 'National ID',
+                    'Phone Number *': '+255123456789',
+                    'Email Address': 'john.doe@email.com',
+                    'Street Name *': 'Main Street',
+                    'House Number *': '123',
+                    'Area of Residence *': 'Downtown',
+                    'Housing Type *': 'Own',
+                    'Marital Status *': 'Single',
+                    'Spouse Name': '',
+                    'Spouse Common Name': '',
+                    'Company Name *': 'ABC Company Ltd',
+                    'Office Location *': 'City Center',
+                    'Position *': 'Manager',
+                    'Years of Employment *': 5,
+                    'Net Monthly Salary *': 500000,
+                    'Business Name': '',
+                    'Business Location': '',
+                    'Average Monthly Income': '',
+                    'Type of Business': '',
+                    'Since When Business': '',
+                    'Group Name': 'Group A'
+                }
+            ];
+
+            const worksheet = XLSX.utils.json_to_sheet(templateData);
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, 'Client Template');
+
+            // Add instructions sheet
+            const instructions = [
+                { 'Field': 'First Name *', 'Description': 'Client\'s first name (Required)', 'Example': 'John' },
+                { 'Field': 'Middle Name', 'Description': 'Client\'s middle name (Optional)', 'Example': 'Michael' },
+                { 'Field': 'Last Name *', 'Description': 'Client\'s last name (Required)', 'Example': 'Doe' },
+                { 'Field': 'Common Name', 'Description': 'Client\'s nickname (Optional)', 'Example': 'Johnny' },
+                { 'Field': 'Gender *', 'Description': 'male, female, or other (Required)', 'Example': 'male' },
+                { 'Field': 'Date of Birth *', 'Description': 'YYYY-MM-DD format (Required)', 'Example': '1990-01-15' },
+                { 'Field': 'National ID Number *', 'Description': 'National ID number (Required)', 'Example': '1234567890123456' },
+                { 'Field': 'ID Type *', 'Description': 'Driver\'s License, National ID, or Voters ID (Required)', 'Example': 'National ID' },
+                { 'Field': 'Phone Number *', 'Description': 'Phone number with country code (Required)', 'Example': '+255123456789' },
+                { 'Field': 'Email Address', 'Description': 'Valid email address (Optional)', 'Example': 'john.doe@email.com' },
+                { 'Field': 'Street Name *', 'Description': 'Street name (Required)', 'Example': 'Main Street' },
+                { 'Field': 'House Number *', 'Description': 'House number (Required)', 'Example': '123' },
+                { 'Field': 'Area of Residence *', 'Description': 'Area of residence (Required)', 'Example': 'Downtown' },
+                { 'Field': 'Housing Type *', 'Description': 'Own or Rented (Required)', 'Example': 'Own' },
+                { 'Field': 'Marital Status *', 'Description': 'Married, Engaged, Single, Divorced, or Widowed (Required)', 'Example': 'Single' },
+                { 'Field': 'Spouse Name', 'Description': 'Spouse\'s full name (Optional)', 'Example': 'Jane Doe' },
+                { 'Field': 'Spouse Common Name', 'Description': 'Spouse\'s nickname (Optional)', 'Example': 'Jane' },
+                { 'Field': 'Company Name *', 'Description': 'Employer company name (Required)', 'Example': 'ABC Company Ltd' },
+                { 'Field': 'Office Location *', 'Description': 'Office location (Required)', 'Example': 'City Center' },
+                { 'Field': 'Position *', 'Description': 'Job position (Required)', 'Example': 'Manager' },
+                { 'Field': 'Years of Employment *', 'Description': 'Years of employment (Required)', 'Example': 5 },
+                { 'Field': 'Net Monthly Salary *', 'Description': 'Monthly salary amount (Required)', 'Example': 500000 },
+                { 'Field': 'Business Name', 'Description': 'Business name if self-employed (Optional)', 'Example': 'John\'s Shop' },
+                { 'Field': 'Business Location', 'Description': 'Business location (Optional)', 'Example': 'Market Street' },
+                { 'Field': 'Average Monthly Income', 'Description': 'Monthly business income (Optional)', 'Example': 300000 },
+                { 'Field': 'Type of Business', 'Description': 'Type of business (Optional)', 'Example': 'Retail' },
+                { 'Field': 'Since When Business', 'Description': 'When business started (Optional)', 'Example': '2020-01-01' },
+                { 'Field': 'Group Name', 'Description': 'Lending group name (Optional)', 'Example': 'Group A' }
+            ];
+
+            const instructionsSheet = XLSX.utils.json_to_sheet(instructions);
+            XLSX.utils.book_append_sheet(workbook, instructionsSheet, 'Instructions');
+
+            XLSX.writeFile(workbook, 'client_upload_template.xlsx');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

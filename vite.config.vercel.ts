@@ -22,16 +22,12 @@ export default defineConfig({
     },
     rollupOptions: {
       input: resolve(__dirname, 'index.html'),
-      external: (id) => {
-        // Externalize tslib and other problematic dependencies
-        return ['tslib', '@supabase/functions-js'].includes(id);
-      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['lucide-react', 'react-hot-toast'],
           supabase: ['@supabase/supabase-js'],
-          utils: ['date-fns', 'lodash-es'],
+          utils: ['date-fns', 'lodash-es', 'tslib'],
         },
       },
     },
@@ -48,7 +44,8 @@ export default defineConfig({
       'lucide-react',
       'react-hot-toast',
       'date-fns',
+      'tslib',
     ],
-    exclude: ['@supabase/functions-js', 'tslib'],
+    exclude: ['@supabase/functions-js'],
   },
 });

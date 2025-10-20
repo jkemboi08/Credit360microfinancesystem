@@ -26,13 +26,12 @@ export default defineConfig({
     },
     rollupOptions: {
       input: resolve(__dirname, 'index.html'),
-      external: ['tslib'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['lucide-react', 'react-hot-toast'],
           supabase: ['@supabase/supabase-js'],
-          utils: ['date-fns', 'lodash-es'],
+          utils: ['date-fns', 'lodash-es', 'tslib'],
         },
       },
     },
